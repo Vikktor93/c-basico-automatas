@@ -12,8 +12,8 @@ Este PR es tu carpeta de entrega: cada git push lo actualiza -->
 Marca con una `x` las que completaste: `[x]`.
 
 - [ ] Cápsula 02 - `hola.c` saluda con mi nombre
-- [ ] Cápsula 03 - 
-- [ ] Cápsula 04 - 
+- [ ] Cápsula 03 - Próximamente
+- [ ] Cápsula 04 - Próximamente
 
 ## Antes de entregar debes revisar lo siguiente:
 

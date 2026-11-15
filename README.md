@@ -70,10 +70,8 @@ c-basico-automatas/
 │   ├── README.md                   enunciado de la actividad
 │   ├── hola.c
 │   └── prueba.sh                   prueba automática
-├── capsula-03/                     
-│   
-└── capsula-04/                    
-
+├── capsula-03/                     (próximamente)
+└── capsula-04/                     (próximamente)
 ```
 
 Cada cápsula es una carpeta. Dentro, el `README.md` explica la actividad y `prueba.sh` la revisa.
