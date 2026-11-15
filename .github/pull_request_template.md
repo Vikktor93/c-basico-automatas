@@ -15,6 +15,13 @@ Marca con una `x` las que completaste: `[x]`.
 - [ ] Cápsula 03 - Próximamente
 - [ ] Cápsula 04 - Próximamente
 
+## Evidencia del entorno (solo en la primera entrega)
+
+Arrastra aquí **una captura** de VS Code que muestre:
+
+1. **`WSL: Ubuntu`** en la esquina inferior izquierda.
+2. En la terminal integrada, la salida de `wsl.exe -l -v` con Ubuntu marcado con `*`.
+
 ## Antes de entregar debes revisar lo siguiente:
 
 - [ ] `make estricto` compila sin advertencias.

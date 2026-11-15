@@ -132,25 +132,45 @@ git push -u origin estudiante/nombre-apellido
 git push
 ```
 
-### 6. Entrega: Pull Request en borrador (solo la primera vez)
+### 6. Prepara la captura del entorno (solo la primera vez)
+
+La primera entrega incluye una captura que demuestra que trabajas con el entorno del curso. En VS Code, abre la terminal integrada (`Ctrl+ñ`) y ejecuta:
+
+```bash
+wsl.exe -l -v
+```
+
+> Se escribe `wsl.exe` (con la extensión) porque estás dentro de Ubuntu: así se llama al comando de Windows. Muestra la misma lista que `wsl -l -v` en PowerShell.
+
+Toma **una sola captura** de la ventana de VS Code (`Win+Shift+S` en Windows) donde se vean:
+
+| Debe verse | Dónde |
+|---|---|
+| **`WSL: Ubuntu`** | Esquina inferior izquierda de VS Code |
+| **Ubuntu marcado con `*`** | Salida de `wsl.exe -l -v` en la terminal |
+
+Guárdala en tu computador: la adjuntarás en el paso siguiente.
+
+### 7. Entrega: Pull Request en borrador (solo la primera vez)
 
 1. Entra a <https://github.com/Vikktor93/c-basico-automatas>. Aparecerá un aviso amarillo con el botón **Compare & pull request**.
    - Si no aparece: pestaña **Pull requests** → **New pull request** → *base:* `main` ← *compare:* `estudiante/nombre-apellido`.
 2. Título: **`Entrega - Nombre Apellido`**.
-3. La descripción ya trae una plantilla: completa tu nombre y marca las cápsulas entregadas.
+3. La descripción ya trae una plantilla:
+   - Completa tu nombre y tu rama.
+   - Marca con `[x]` las cápsulas entregadas y la lista de revisión.
+   - En **Evidencia del entorno**, **arrastra la captura** del paso 6 dentro del cuadro de texto. GitHub la sube sola y escribe un enlace a la imagen; espera a que termine antes de seguir.
 4. Abre la flecha del botón verde y elige **Create draft pull request**.
 
-También puedes crearlo desde la terminal:
-
-```bash
-gh pr create --draft --base main --title "Entrega - Nombre Apellido" --fill
-```
+> El PR se crea desde la página de GitHub, no con `gh pr create`: la captura solo se puede adjuntar en el navegador, y `gh pr create --fill` no usa la plantilla.
 
 > **El PR nunca se fusiona** (no presiones *Merge*). Es tu carpeta de entrega: ahí el docente revisa y deja comentarios.
 
-**En las cápsulas siguientes no abras un PR nuevo.** Cada `git push` actualiza automáticamente el mismo PR. Edita la descripción para marcar las cápsulas nuevas.
+**En las cápsulas siguientes no abras un PR nuevo ni subas otra captura.** Cada `git push` actualiza automáticamente el mismo PR. Edita la descripción (los tres puntos `···` del primer comentario → **Edit**) para marcar las cápsulas nuevas.
 
-### 7. Revisa la compilación automática
+> **¿Hay que subir algo a ULagos Virtual?** Si el docente lo pide, entrega en ULagos Virtual solo el **enlace a tu PR** (por ejemplo, `https://github.com/Vikktor93/c-basico-automatas/pull/12`). El código, la compilación y la captura quedan en GitHub.
+
+### 8. Revisa la compilación automática
 
 En tu PR, baja hasta la sección de **checks**. Hay uno por cápsula:
 
@@ -164,7 +184,7 @@ Es normal ver ✗ en las cápsulas que **todavía no haces**. Lo importante es q
 
 Si una está en ✗: clic en **Details**, abre el paso que falló y lee el mensaje. Es el mismo que verías con `make estricto` o `make probar` en tu computador.
 
-### 8. Revisa los comentarios del docente
+### 9. Revisa los comentarios del docente
 
 En tu PR → pestaña **Conversation** o **Files changed**. Corrige lo que se indique, haz commit y push. Los cambios aparecen en el mismo PR.
 
@@ -233,5 +253,6 @@ git diff estudiante/nombre-apellido origin/docente/solucion -- capsula-03/
 | Guardar cambios | `git add <archivo>` y `git commit -m "mensaje"` |
 | Subir (primera vez) | `git push -u origin estudiante/nombre-apellido` |
 | Subir (siguientes) | `git push` |
-| Crear el PR (una vez) | `gh pr create --draft --base main --title "Entrega - Nombre Apellido" --fill` |
+| Captura del entorno (una vez) | `wsl.exe -l -v` en la terminal de VS Code, y `Win+Shift+S` |
+| Crear el PR (una vez) | En GitHub: **Compare & pull request** → **Create draft pull request** |
 | Traer una cápsula nueva | `git checkout main`, `git pull`, `git checkout <mi-rama>`, `git merge main` |
