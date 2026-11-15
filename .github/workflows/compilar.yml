@@ -1,0 +1,50 @@
+# Compila y prueba cada cápsula en cada Pull Request.
+# En la pestaña "Checks" del PR aparece un resultado por cápsula.
+name: Compilar y probar
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  detectar:
+    name: Detectar cápsulas
+    runs-on: ubuntu-24.04
+    outputs:
+      capsulas: ${{ steps.lista.outputs.capsulas }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: lista
+        name: Listar carpetas capsula-*
+        run: |
+          capsulas=$(ls -d capsula-*/ | sed 's#/$##' | jq -R . | jq -sc .)
+          echo "Cápsulas encontradas: $capsulas"
+          echo "capsulas=$capsulas" >> "$GITHUB_OUTPUT"
+
+  capsula:
+    name: ${{ matrix.capsula }}
+    needs: detectar
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        capsula: ${{ fromJSON(needs.detectar.outputs.capsulas) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Versión de gcc
+        run: gcc --version | head -1
+
+      - name: Compilar sin advertencias (-Wall -Wextra -Werror)
+        run: make estricto DIR=${{ matrix.capsula }}
+
+      - name: Ejecutar la prueba
+        run: |
+          if [ -f "${{ matrix.capsula }}/prueba.sh" ]; then
+            bash "${{ matrix.capsula }}/prueba.sh"
+          else
+            echo "Esta cápsula no tiene prueba automática."
+          fi

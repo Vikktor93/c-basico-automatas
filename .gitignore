@@ -1,0 +1,19 @@
+# Ejecutables de make
+build/
+
+# Dentro de cada cápsula se sube solo el código, el enunciado y la prueba.
+# Así no se suben los ejecutables compilados a mano (hola, ficha, paridad...),
+# que en Linux no tienen extensión.
+capsula-*/*
+!capsula-*/*.c
+!capsula-*/*.h
+!capsula-*/*.md
+!capsula-*/*.txt
+!capsula-*/*.sh
+
+# Por si acaso
+*.o
+a.out
+
+# Configuración personal del editor
+.vscode/

@@ -1,0 +1,6 @@
+# Saltos de línea de Linux (LF) para todos los archivos de texto,
+# aunque alguien los edite desde Windows.
+* text=auto eol=lf
+
+# Los scripts de prueba deben tener LF o bash falla.
+*.sh text eol=lf
