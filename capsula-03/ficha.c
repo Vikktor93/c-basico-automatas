@@ -1,30 +1,15 @@
-/*
- * ficha.c - Cápsula 03
- *
- * Completa los TODO. Al terminar, borra la línea que imprime "TODO"
- */
 #include <stdio.h>
 
-int main(void)
+int main(void) 
 {
-    /* TODO 1: declara cuatro variables con tus datos:
-     *   - nombre   : texto       (ejemplo: const char *nombre = "María Pérez";)
-     *   - inicial  : un char     (ejemplo: 'M')
-     *   - edad     : un int
-     *   - promedio : un double
-     */
+    char nombre[] = "Joaquín Macías"; // Usar un array de char para guardar nombre (Sugerencia de IA), además usar ""
+    char inicial = 'J'; // Se usa '' para un solo carácter, mientras que "" se usa para varios caracteres, o sea una cadena
+    int edad = 20;
+    double promedio = 5.8;
 
-    /* TODO 2: imprime cada dato en su propia línea, con su formato:
-     *   %s para el nombre, %c para la inicial,
-     *   %d para la edad y %.1f para el promedio.
-     *
-     * Ejemplo de salida:
-     *   Nombre: María Pérez
-     *   Inicial: M
-     *   Edad: 20
-     *   Promedio: 5.8
-     */
-
-    printf("TODO: completar ficha.c\n");
+    printf("Nombre: %s\n", nombre);
+    printf("Inicial: %c\n", inicial);
+    printf("Edad: %d\n", edad);
+    printf("Promedio: %.1f\n", promedio);
     return 0;
 }
