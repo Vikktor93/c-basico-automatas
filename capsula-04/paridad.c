@@ -10,6 +10,9 @@
  *   Recibe un int y retorna un bool.
  */
 
+ int es_par(int n);
+
+
 int main(void)
 {
     /* TODO 2: escribe un ciclo for de 1 a 10 que, usando es_par,
@@ -20,7 +23,14 @@ int main(void)
      *   10 es par
      */
 
-    printf("TODO: completar paridad.c\n");
+    for (int num = 1; num <= 10; num++) {
+        if (es_par(num)) {
+            printf("%d es par\n", num);
+        } else {
+            printf("%d es impar\n", num);
+        }
+    }
+
     return 0;
 }
 
@@ -28,3 +38,7 @@ int main(void)
  *   Retorna true si n es par y false si no.
  *   Pista: el operador % entrega el resto de la división.
  */
+int es_par(int n) 
+{
+    return n % 2 == 0;
+}
