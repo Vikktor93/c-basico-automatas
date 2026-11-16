@@ -25,6 +25,17 @@ int main(void)
      *   Promedio: 5.8
      */
 
-    printf("TODO: completar ficha.c\n");
+    const char *nombre = "Karla Miranda";
+    char inicial = 'K';
+    int edad = 24;
+    double nota1 = 5.0;
+    double nota2 = 4.9;
+    double nota3 = 5.5;
+
+    printf("Nombre: %s\n", nombre);
+    printf("Inicial: %c\n", inicial);
+    printf("Edad: %d\n", edad);
+    printf("Promedio de notas: %.1f\n", (nota1 + nota2 + nota3) / 3);
+
     return 0;
 }
