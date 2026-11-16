@@ -25,6 +25,18 @@ int main(void)
      *   Promedio: 5.8
      */
 
-    printf("TODO: completar ficha.c\n");
+
+
+    // Variables 
+
+
+    char Nombre[] = "Cristobal Oñate ";
+    char Inicial = 'C' ;
+    int Edad = 21;
+    float Promedio = 1.0;
+
+    printf("Nombre: %s \nInicial: %c \nEdad: %i \nPromedio: %f", Nombre, Inicial, Edad, Promedio);
+
+
     return 0;
 }
