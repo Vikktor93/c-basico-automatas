@@ -21,3 +21,5 @@ Al llamar `intercambiar(a, b)` desde `main`, los valores de `a` y `b` **no cambi
 
 <!-- Escribe tu respuesta debajo de esta línea. -->
 
+Porque C pasa los argumentos por valor, asi que x e y son solo copias de a y b, y no las variables originales.
+Lo que se intercambia dentro de la función son esas copias, por lo que a y b en main no cambian.
