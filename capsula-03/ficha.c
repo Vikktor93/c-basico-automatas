@@ -7,24 +7,19 @@
 
 int main(void)
 {
-    /* TODO 1: declara cuatro variables con tus datos:
-     *   - nombre   : texto       (ejemplo: const char *nombre = "María Pérez";)
-     *   - inicial  : un char     (ejemplo: 'M')
-     *   - edad     : un int
-     *   - promedio : un double
-     */
+    /* TODO 1: declara cuatro variables con tus datos*/
+    const char *nombre = "Ana Villegas";
+    char inicial= 'A';
+    int edad = 49;
+    double promedio = 4.5;
+     
+    /* TODO 2: imprime cada dato en su propia línea, con su formato:*/
+    printf("Nombre: %s\n", nombre);  
+    printf("Inicial: %c\n", inicial); 
+    printf("Edad: %d\n", edad);
+    printf("Promedio: %.1f\n", promedio);
+    
+     
 
-    /* TODO 2: imprime cada dato en su propia línea, con su formato:
-     *   %s para el nombre, %c para la inicial,
-     *   %d para la edad y %.1f para el promedio.
-     *
-     * Ejemplo de salida:
-     *   Nombre: María Pérez
-     *   Inicial: M
-     *   Edad: 20
-     *   Promedio: 5.8
-     */
-
-    printf("TODO: completar ficha.c\n");
     return 0;
 }
