@@ -14,6 +14,8 @@ Marca con una `x` las que completaste: `[x]`.
 - [ ] Cápsula 02 - `hola.c` saluda con mi nombre
 - [ ] Cápsula 03 - `ficha.c` imprime mis cuatro datos
 - [ ] Cápsula 04 - `paridad.c` y `respuesta.md`
+- [ ] Cápsula 05 - `cadenas.c` y `respuesta.md`
+- [ ] Cápsula 06 - `punteros.c` y `respuesta.md`
 
 ## Evidencia del entorno (solo en la primera entrega)
 
@@ -26,7 +28,7 @@ Arrastra aquí **una captura** de VS Code que muestre:
 
 - [ ] `make estricto` compila sin advertencias.
 - [ ] `make probar` pasa en las cápsulas que entrego.
-- [ ] No subas ejecutables (`git status` no muestra `hola`, `ficha`, `paridad` ni `build/`).
+- [ ] No subas ejecutables (`git status` no muestra `hola`, `ficha`, `paridad`, `cadenas`, `punteros` ni `build/`).
 
 ## Comentarios o dudas para el docente
 
