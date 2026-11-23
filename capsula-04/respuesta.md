@@ -20,4 +20,6 @@ Al llamar `intercambiar(a, b)` desde `main`, los valores de `a` y `b` **no cambi
 ## Tu respuesta
 
 <!-- Escribe tu respuesta debajo de esta línea. -->
-
+la función recibe copias de los valores de a y b.. no son las originales
+lo que se intercambia son esas valores(x e y), y desaparecen cuando la función termina
+los valores originales no se tocaron , por eso en main siguen igual
