@@ -75,12 +75,26 @@ c-basico-automatas/
 │   ├── ficha.c                     esqueleto con TODO
 │   └── prueba.sh
 ├── capsula-04/                     C para quien ya programa
-│    ├── README.md
-│    ├── paridad.c                   esqueleto con TODO
-│    ├── esperado.txt                salida que debe producir paridad
-│    ├── respuesta.md                pregunta de reflexión
-│    └── prueba.sh
-├── ejemplos/                       programas de las cápsulas (no se evalúan)
+│   ├── README.md
+│   ├── paridad.c                   esqueleto con TODO
+│   ├── esperado.txt                salida que debe producir paridad
+│   ├── respuesta.md                pregunta de reflexión
+│   └── prueba.sh
+├── capsula-05/                     Arreglos y cadenas
+│   ├── README.md
+│   ├── cadenas.c                   esqueleto con TODO
+│   ├── esperado.txt
+│   ├── respuesta.md
+│   └── prueba.sh
+├── capsula-06/                     Punteros
+│   ├── README.md
+│   ├── punteros.c                  esqueleto con TODO
+│   ├── esperado.txt
+│   ├── respuesta.md
+│   └── prueba.sh
+└── ejemplos/                       programas de las cápsulas (no se evalúan)
+    ├── README.md
+    └── capsula-03/ ... capsula-06/
 ```
 
 Cada cápsula es una carpeta. Dentro, el `README.md` explica la actividad y `prueba.sh` la revisa.
@@ -166,7 +180,7 @@ flowchart LR
 Ya está configurado en `.gitignore`:
 
 - `build/`: los ejecutables de `make`. Se recrean con `make`.
-- Ejecutables compilados a mano dentro de cada cápsula (`hola`, `ficha`, `paridad`, `a.out`).
+- Ejecutables compilados a mano dentro de cada cápsula (`hola`, `ficha`, `paridad`, `cadenas`, `punteros`, `a.out`).
 - Archivos objeto `*.o`.
 - `.vscode/`: la configuración personal de tu editor.
 
