@@ -19,5 +19,4 @@ Al llamar `intercambiar(a, b)` desde `main`, los valores de `a` y `b` **no cambi
 
 ## Tu respuesta
 
-<!-- Escribe tu respuesta debajo de esta línea. -->
-
+Los valores de a y b no cambian ya que lo que se envía a la función cambiar es el valor de a y b, entonces x e y se transforman en ese esos valores. Por ello es que las variables originales no cambian su valor, simplemente envian una copia del suyo a la función.
