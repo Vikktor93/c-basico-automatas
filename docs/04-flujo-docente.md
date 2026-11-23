@@ -240,7 +240,11 @@ Usa como modelo las existentes:
 |---|---|
 | `capsula-02/prueba.sh` | Que la salida empiece con un texto y no sea el original |
 | `capsula-03/prueba.sh` | Que no diga `TODO` y tenga un mínimo de líneas |
-| `capsula-04/prueba.sh` | Que la salida sea idéntica a `esperado.txt` (con `diff`) |
+| `capsula-04/prueba.sh` | Que la salida sea idéntica a `esperado.txt` (con `diff`) y que `respuesta.md` tenga texto |
+| `capsula-05/prueba.sh` | Lo anterior, más: que no use `<string.h>` y que las funciones respondan bien con **otros casos** |
+| `capsula-06/prueba.sh` | Salida, funciones con otros casos y respuesta |
+
+**Probar las funciones con otros casos** (cápsulas 05 y 06): el script compila el `.c` del estudiante junto a un `main` de prueba. El `main` del estudiante se renombra con `#define main main_estudiante` antes de incluir su archivo, para que no choque. Así se detecta a quien imprime la salida esperada «a mano» sin implementar las funciones.
 
 Reglas:
 

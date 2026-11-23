@@ -1,0 +1,5 @@
+w = λ: largo 0, 0 unos, en {0,1}: sí
+w = 0110: largo 4, 2 unos, en {0,1}: sí
+w = 1001: largo 4, 2 unos, en {0,1}: sí
+w = 10a1: largo 4, 2 unos, en {0,1}: no
+w = 111: largo 3, 3 unos, en {0,1}: sí

@@ -1,0 +1,6 @@
+antes:   a=1 b=2
+después: a=2 b=1
+w = λ: 0 ceros, 0 unos, no tiene 1
+w = 0110: 2 ceros, 2 unos, primer 1 en la posición 1
+w = 1000: 3 ceros, 1 unos, primer 1 en la posición 0
+w = 111: 0 ceros, 3 unos, primer 1 en la posición 0

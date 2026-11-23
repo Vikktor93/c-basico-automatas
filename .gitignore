@@ -18,10 +18,7 @@ a.out
 # Configuración personal del editor
 .vscode/
 
-cat >> .gitignore <<'EOF'
-
 # Ejemplos: se sube solo el código y las explicaciones
 ejemplos/*/*
 !ejemplos/*/*.c
 !ejemplos/*/*.md
-EOF
