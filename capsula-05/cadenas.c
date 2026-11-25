@@ -27,7 +27,7 @@ int main(void)
      *   Pista: el tamaño de todo el arreglo dividido por el tamaño de
      *   una palabra (palabras[0]).
      */
-    int n = 1;
+    int n = sizeof palabras / sizeof palabras[0];
 
     for (int i = 0; i < n; i++) {
         printf("w = %s: largo %d, %d unos, en {0,1}: %s\n",
@@ -37,7 +37,7 @@ int main(void)
                en_alfabeto(palabras[i], sigma) ? "sí" : "no");
     }
 
-    printf("TODO: completar cadenas.c\n");
+  
     return 0;
 }
 
@@ -46,8 +46,12 @@ int main(void)
  */
 int largo(const char s[])
 {
-    (void)s;    /* borra esta línea al implementar la función */
-    return 0;
+    int n = 0;
+    while (s[n] != '\0'){
+        n++;
+    }
+        
+    return n;
 }
 
 /* TODO 2: contar retorna cuántas veces aparece el carácter c en s.
@@ -55,9 +59,15 @@ int largo(const char s[])
  */
 int contar(const char s[], char c)
 {
-    (void)s;    /* borra estas dos líneas al implementar la función */
-    (void)c;
-    return 0;
+    int veces = 0;
+    for (int i = 0; s [i] != '\0'; i++){
+        if (s[i]== c){
+            veces++;
+ 
+        }
+    }
+    
+    return veces;
 }
 
 /* TODO 3: en_alfabeto retorna true si TODOS los símbolos de s están en
@@ -69,7 +79,11 @@ int contar(const char s[], char c)
  */
 bool en_alfabeto(const char s[], const char sigma[])
 {
-    (void)s;    /* borra estas dos líneas al implementar la función */
-    (void)sigma;
-    return false;
+    for (int i = 0; s[i] !='\0'; i++){
+        if(contar (sigma, s[i])==0 ){
+            return false;
+        }
+    }
+    
+    return true;
 }
