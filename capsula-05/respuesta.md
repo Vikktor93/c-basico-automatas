@@ -22,4 +22,6 @@ Responde en tres a cinco líneas, con tus palabras.
 ## Tu respuesta
 
 <!-- Escribe tu respuesta debajo de esta línea. -->
-
+sizeof s da 6 porque mide tdas las casillas del arreglo , incluido '\0' del final
+largo(s) da 5 porque cuenta hasta encontrarse con '\0' sin contarlo
+char t[5] = "lemas" le falta una casilla para '\0' asi que no queda terminado como cadena y las funciones salen leyendo memoria que no es la suya

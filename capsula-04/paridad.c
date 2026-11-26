@@ -7,8 +7,9 @@
 #include <stdbool.h>
 
 /* TODO 1: escribe aquí el PROTOTIPO de la función es_par.
- *   Recibe un int y retorna un bool.
+ * / tipo_que_retoma nombre(tipo_del_parametro nombre_del_parametro); 
  */
+bool es_par(int n);
 
 int main(void)
 {
@@ -19,8 +20,15 @@ int main(void)
      *   ...
      *   10 es par
      */
+    for (int i = 1; i <= 10; i++) {
+    if (es_par(i)) {
+        printf("%d es par\n", i);
+    } else {
+        printf("%d es impar\n", i);
+    }
+}
 
-    printf("TODO: completar paridad.c\n");
+   
     return 0;
 }
 
@@ -28,3 +36,7 @@ int main(void)
  *   Retorna true si n es par y false si no.
  *   Pista: el operador % entrega el resto de la división.
  */
+bool es_par(int n)
+{
+    return n % 2 == 0;
+}

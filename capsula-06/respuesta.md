@@ -12,4 +12,6 @@ Responde en tres a cinco líneas, con tus palabras.
 ## Tu respuesta
 
 <!-- Escribe tu respuesta debajo de esta línea. -->
+Ahora la función recibe las direcciones de `a` y `b`, no sus valores. Con esas direcciones puede llegar a las variables originales y cambiarlas. `*x = *y` significa "pon en la casa de `x` lo que hay en la casa de `y`".
 
+`printf` solo lee el valor de `n`, así que le basta una copia. `scanf` tiene que escribir en `n`, así que necesita saber dónde está ubicada, y por eso lleva `&`.
