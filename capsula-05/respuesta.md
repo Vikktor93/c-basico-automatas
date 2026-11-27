@@ -21,5 +21,12 @@ Responde en tres a cinco líneas, con tus palabras.
 
 ## Tu respuesta
 
-<!-- Escribe tu respuesta debajo de esta línea. -->
+1. `sizeof s` mide toda la memoria del arreglo: las 5 letras de "lemas"
+   más el '\0' final, o sea 6 bytes. `largo(s)` recorre la cadena solo
+   hasta encontrar el '\0' y no lo cuenta, por eso da 5.
 
+2. A `t` le falta espacio para el '\0': "lemas" necesita 6 bytes y `t`
+   tiene 5. Sin terminador, `largo(t)` no sabe dónde parar y sigue
+   leyendo la memoria que viene después del arreglo hasta encontrar un 0
+   por casualidad. Por eso puede dar cualquier número o hacer que el
+   programa falle.

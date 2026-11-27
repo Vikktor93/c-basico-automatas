@@ -20,4 +20,4 @@ Al llamar `intercambiar(a, b)` desde `main`, los valores de `a` y `b` **no cambi
 ## Tu respuesta
 
 <!-- Escribe tu respuesta debajo de esta línea. -->
-
+Porque en C los argumentos se pasan por valor: intercambiar recibe copias de a y b, intercambia esas copias dentro de la función y los originales en main no cambian. Para modificarlos habría que pasar sus direcciones con punteros.
