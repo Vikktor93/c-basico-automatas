@@ -11,5 +11,13 @@ Responde en tres a cinco líneas, con tus palabras.
 
 ## Tu respuesta
 
-<!-- Escribe tu respuesta debajo de esta línea. -->
+1. Ahora la función recibe las direcciones de `a` y `b`, no sus valores:
+   `x` e `y` son punteros que apuntan a esas variables. `*x = *y`
+   significa "escribe, en la variable a la que apunta x, el valor que
+   hay en la variable a la que apunta y". Por eso cambia el `a` de main
+   y no una copia.
+
+2. `scanf` tiene que escribir el número leído en `n`, así que necesita
+   saber dónde está `n` en memoria: por eso recibe `&n`. `printf` solo
+   lee el valor de `n` para mostrarlo, y le basta una copia del valor.
 

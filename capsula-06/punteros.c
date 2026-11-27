@@ -1,8 +1,6 @@
 /*
  * punteros.c - Cápsula 06
  *
- * Completa los TODO. Al terminar, borra la línea que imprime "TODO"
- *
  * Recuerda:
  *   &x   la dirección de x           int *p = &x;
  *   *p   lo que hay en esa dirección  *p = 5;  (cambia x)
@@ -19,10 +17,8 @@ int main(void)
     int a = 1, b = 2;
     printf("antes:   a=%d b=%d\n", a, b);
 
-    /* TODO 4: llama a intercambiar para que cambie a y b.
-     *   Pista: la función no necesita los valores de a y b, sino
-     *   dónde están guardados.
-     */
+    /* Se entregan las direcciones de a y b, no sus valores */
+    intercambiar(&a, &b);
 
     printf("después: a=%d b=%d\n", a, b);
 
@@ -44,40 +40,42 @@ int main(void)
             printf("no tiene 1\n");
     }
 
-    printf("TODO: completar punteros.c\n");
     return 0;
 }
 
-/* TODO 1: intercambiar cambia los valores de las variables a las que
- *   apuntan x e y.
+/* intercambiar cambia los valores de las variables a las que
+ * apuntan x e y.
  */
 void intercambiar(int *x, int *y)
 {
-    (void)x;    /* borra estas dos líneas al implementar la función */
-    (void)y;
+    int tmp = *x;   /* guarda el valor de la variable de x */
+    *x = *y;        /* escribe en esa variable el valor de y */
+    *y = tmp;       /* escribe en la variable de y el valor guardado */
 }
 
-/* TODO 2: contar_simbolos cuenta los '0' y los '1' de w y deja los
- *   resultados en *ceros y *unos. Otros símbolos se ignoran.
- *   Ojo: no confíes en el valor que traen *ceros y *unos (main los
- *   inicializa en -1). Asígnales tú el valor inicial.
- *   Ejemplo: w = "0110"  →  *ceros = 2, *unos = 2
- */
+/* contar_simbolos deja en *ceros y *unos la cantidad de '0' y '1' de w. */
 void contar_simbolos(const char *w, int *ceros, int *unos)
 {
-    (void)w;    /* borra estas tres líneas al implementar la función */
-    (void)ceros;
-    (void)unos;
+    *ceros = 0;     /* main los dejó en -1: partimos desde 0 */
+    *unos = 0;
+
+    for (const char *p = w; *p != '\0'; p++) {
+        if (*p == '0')
+            (*ceros)++;
+        else if (*p == '1')
+            (*unos)++;
+    }
 }
 
-/* TODO 3: buscar retorna un puntero a la PRIMERA aparición de c en w,
- *   o NULL si c no aparece.
- *   Recorre w con el puntero (w++), sin usar índices w[i].
- *   Ejemplo: buscar("1000", '0') retorna w + 1
+/* buscar retorna un puntero a la primera aparición de c en w,
+ * o NULL si c no aparece.
  */
 const char *buscar(const char *w, char c)
 {
-    (void)w;    /* borra estas dos líneas al implementar la función */
-    (void)c;
+    while (*w != '\0') {
+        if (*w == c)
+            return w;
+        w++;
+    }
     return NULL;
 }
